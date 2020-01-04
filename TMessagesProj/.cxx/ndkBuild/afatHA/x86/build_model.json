@@ -1,0 +1,64 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram",
+      "sdkFolder": "/Users/matthijsblankevoort/Library/Android/sdk",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates",
+      "gradleModulePathName": ":TMessagesProj",
+      "moduleRootFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj",
+      "makeFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/jni/Android.mk",
+      "buildSystem": "NDK_BUILD",
+      "compilerSettingsCacheFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/.cxx",
+      "cxxFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx",
+      "ndkFolder": "/Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle",
+      "ndkVersion": "20.1.5948944",
+      "ndkSupportedAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [
+      "NDK_APPLICATION_MK:\u003djni/Application.mk",
+      "APP_PLATFORM:\u003dandroid-16",
+      "-j8"
+    ],
+    "cFlagList": [],
+    "cppFlagsList": [],
+    "variantName": "afatHA",
+    "soFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatHA/lib",
+    "objFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatHA/obj/local",
+    "jsonFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA",
+    "gradleBuildOutputFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/cxx/afatHA",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "X86",
+  "abiPlatformVersion": 16,
+  "cxxBuildFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86",
+  "jsonFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/android_gradle_build.json",
+  "gradleBuildOutputFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/cxx/afatHA/x86",
+  "objFolder": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatHA/obj/local/x86",
+  "buildCommandFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/build_command.txt",
+  "buildOutputFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/build_output.txt",
+  "modelOutputFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/build_model.json",
+  "jsonGenerationLoggingRecordFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/json_generation_record.json",
+  "compileCommandsJsonFile": "/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/.cxx/ndkBuild/afatHA/x86/compile_commands.json"
+}
