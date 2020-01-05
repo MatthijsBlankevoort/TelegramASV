@@ -4029,6 +4029,7 @@ public class MessageObject {
     }
 
     public static long getDialogId(TLRPC.Message message) {
+
         if (message.dialog_id == 0 && message.to_id != null) {
             if (message.to_id.chat_id != 0) {
                 message.dialog_id = -message.to_id.chat_id;

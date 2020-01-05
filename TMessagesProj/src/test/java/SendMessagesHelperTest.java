@@ -1,10 +1,42 @@
+import android.accounts.Account;
+
+import net.hockeyapp.android.metrics.model.Base;
+
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.telegram.messenger.AccountInstance;
+import org.telegram.messenger.BaseController;
+import org.telegram.messenger.MessageObject;
+import org.telegram.messenger.SendMessagesHelper;
+import org.telegram.tgnet.TLRPC;
+
+import java.util.ArrayList;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
 
 public class SendMessagesHelperTest {
+    @Mock
+    MessageObject messageObject;
+
+    @Mock
+    TLRPC.Message message;
+
+    AccountInstance account;
+
+    @Before
+    public void setup() throws Exception {
+        MockitoAnnotations.initMocks(this);
+    }
+
     @Test
     public void testSendMessages() {
-        assertEquals(1,1);
+        MessageObject m = mock(MessageObject.class);
+
+
+        assertTrue(messageObject.isSending());
     }
 }
