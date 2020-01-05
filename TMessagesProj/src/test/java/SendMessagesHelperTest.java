@@ -25,6 +25,7 @@ public class SendMessagesHelperTest {
     @Mock
     TLRPC.Message message;
 
+    @Mock
     AccountInstance account;
 
     @Before
@@ -35,8 +36,11 @@ public class SendMessagesHelperTest {
     @Test
     public void testSendMessages() {
         MessageObject m = mock(MessageObject.class);
+        message.dialog_id = 1;
+        m.messageOwner = message;
+        SendMessagesHelper sendMessagesHelper = mock(SendMessagesHelper.class);
+        sendMessagesHelper.sendMessage(m);
 
-
-        assertTrue(messageObject.isSending());
+        assertTrue(messageObject.isSent());
     }
 }
