@@ -401,17 +401,17 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
     public SendMessagesHelper(int instance) {
         super(instance);
 
-        AndroidUtilities.runOnUIThread(() -> {
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.FileDidUpload);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.FileDidFailUpload);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.filePreparingStarted);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileNewChunkAvailable);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.filePreparingFailed);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.httpFileDidFailedLoad);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.httpFileDidLoad);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileDidLoad);
-            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileDidFailToLoad);
-        });
+//        AndroidUtilities.runOnUIThread(() -> {
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.FileDidUpload);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.FileDidFailUpload);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.filePreparingStarted);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileNewChunkAvailable);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.filePreparingFailed);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.httpFileDidFailedLoad);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.httpFileDidLoad);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileDidLoad);
+//            getNotificationCenter().addObserver(SendMessagesHelper.this, NotificationCenter.fileDidFailToLoad);
+//        });
     }
 
     public void cleanup() {
