@@ -1,18 +1,10 @@
-import android.accounts.Account;
-
-import com.google.android.exoplayer2.decoder.SimpleOutputBuffer;
-
-import net.hockeyapp.android.metrics.model.Base;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
+
 import org.mockito.MockitoAnnotations;
 import org.telegram.messenger.AccountInstance;
-import org.telegram.messenger.BaseController;
 import org.telegram.messenger.MessageObject;
-import org.telegram.messenger.MessagesController;
+
 import org.telegram.messenger.SendMessagesHelper;
 import org.telegram.tgnet.TLRPC;
 
@@ -40,10 +32,13 @@ public class SendMessagesHelperTest {
         m.messageOwner.dialog_id = 1;
         m.messageOwner = message;
 
+        doCallRealMethod().when(accountInstance).getSendMessagesHelper();
+        
         SendMessagesHelper sendMessagesHelper = accountInstance.getSendMessagesHelper();
-        System.out.println("SEND MESSAGES HELPER " + sendMessagesHelper);
-        doCallRealMethod().when(sendMessagesHelper).sendMessage(m);
 
+        System.out.println("SEND MESSAGES HELPER " + sendMessagesHelper);
+        sendMessagesHelper.sendMessage(m);
+        System.out.println(m.messageOwner.send_state);
         assertTrue(m.isSent());
     }
 }
