@@ -74,6 +74,25 @@ public class SendMessagesHelperTest {
     }
 
     @Test
+    public void testCanForwardMessage() {
+        TLRPC.Message message = mock(TLRPC.Message.class);
+        TLRPC.TL_document document = mock(TLRPC.TL_document.class);
+        MessageObject m = mock(MessageObject.class);
+        mock(TLRPC.User.class);
+        AccountInstance accountInstance = mock(AccountInstance.class);
+
+        doCallRealMethod().when(accountInstance).getSendMessagesHelper();
+        SendMessagesHelper sendMessagesHelper = accountInstance.getSendMessagesHelper();
+        doCallRealMethod().when(m).canForwardMessage();
+
+        m.messageOwner = message;
+        
+        sendMessagesHelper.sendMessage(m);
+
+        assertTrue(m.canForwardMessage());
+    }
+
+    @Test
     public void testSendAudioFiles() {
         TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
