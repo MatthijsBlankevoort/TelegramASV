@@ -1,12 +1,14 @@
 import org.junit.Test;
 import org.telegram.messenger.AccountInstance;
 import org.telegram.messenger.MessageObject;
+import org.telegram.messenger.MessagesController;
 import org.telegram.messenger.SendMessagesHelper;
 import org.telegram.tgnet.TLRPC;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.doCallRealMethod;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public class MessageObjectTest {
 
@@ -34,5 +36,19 @@ public class MessageObjectTest {
         m.setIsRead();
 
         assertFalse(m.isUnread());
+    }
+
+    @Test
+    public void testIfEncryptedChatIsAddedToEncryptedChats() {
+        TLRPC.EncryptedChat encryptedChat = mock(TLRPC.EncryptedChat.class);
+        MessagesController messagesController = mock(MessagesController.class);
+
+        messagesController.putEncryptedChat(encryptedChat, false);
+
+        when(messagesController.getEncryptedChat(encryptedChat.id)).thenReturn(encryptedChat);
+
+
+        assertEquals(messagesController.getEncryptedChat(encryptedChat.id), encryptedChat);
+
     }
 }
