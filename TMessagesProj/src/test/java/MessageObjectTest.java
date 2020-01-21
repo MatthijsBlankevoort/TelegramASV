@@ -23,10 +23,16 @@ public class MessageObjectTest {
         doCallRealMethod().when(m).isUnread();
         doCallRealMethod().when(m).setIsRead();
 
+        message.unread = true;
+
         m.messageOwner = message;
 
         sendMessagesHelper.sendMessage(m);
+
+        assertTrue(m.isUnread());
+
         m.setIsRead();
+
         assertFalse(m.isUnread());
     }
 }
