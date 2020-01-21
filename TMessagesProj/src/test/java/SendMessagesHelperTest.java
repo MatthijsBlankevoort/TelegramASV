@@ -76,23 +76,15 @@ public class SendMessagesHelperTest {
     @Test
     public void testSendAudioFiles() {
         TLRPC.Message message = mock(TLRPC.Message.class);
-
+        MessageObject m = mock(MessageObject.class);
         TLRPC.TL_document document = mock(TLRPC.TL_document.class);
         TLRPC.TL_documentAttributeAudio audio = mock(TLRPC.TL_documentAttributeAudio.class);
-        MessageObject messageObject = mock(MessageObject.class);
-        doCallRealMethod().when(messageObject).getDialogId();
-        mock(TLRPC.User.class);
-        AccountInstance accountInstance = mock(AccountInstance.class);
+        document.attributes = new ArrayList<>();
+        document.attributes.add(audio);
 
+        when(m.isVoice()).thenReturn(true);
+        assertEquals(m.isVoice(), true);
 
-        doCallRealMethod().when(accountInstance).getSendMessagesHelper();
-        SendMessagesHelper sendMessagesHelper = accountInstance.getSendMessagesHelper();
-        doCallRealMethod().when(messageObject).isSent();
-
-        if (messageObject.isVoice()) {
-            boolean result = MediaController.getInstance().playAudio(messageObject);
-            return result;
-        }
     }
 
     @Test
