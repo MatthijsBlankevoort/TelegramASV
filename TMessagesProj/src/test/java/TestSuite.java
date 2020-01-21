@@ -4,7 +4,8 @@ import org.telegram.messenger.SendMessagesHelper;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-        SendMessagesHelperTest .class
+        SendMessagesHelperTest.class,
+        MessageObjectTest.class
 })
 
 public class  TestSuite {
