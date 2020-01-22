@@ -96,6 +96,8 @@ public class SendMessagesHelperTest {
         assertTrue(m.canForwardMessage());
     }
 
+
+    //Tests send audio files
     @Test
     public void testSendAudioFiles() {
         MessageObject m = mock(MessageObject.class);
