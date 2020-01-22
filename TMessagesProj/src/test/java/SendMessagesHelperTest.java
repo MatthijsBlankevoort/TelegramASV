@@ -58,24 +58,31 @@ public class SendMessagesHelperTest {
         doCallRealMethod().when(m).getDialogId();
 
         AccountInstance accountInstance = mock(AccountInstance.class);
+        TLRPC.MessageMedia media = mock(TLRPC.MessageMedia.class);
+        document.file_name = "test-doc";
+
+        message.media = media;
+        message.media.document = document;
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
         SendMessagesHelper sendMessagesHelper = accountInstance.getSendMessagesHelper();
         doCallRealMethod().when(m).isSent();
+        doCallRealMethod().when(m).getDocument();
 
         m.messageOwner = message;
-        m.emojiAnimatedSticker = document;
 
 
         sendMessagesHelper.sendMessage(m);
 
         assertTrue(m.isSent());
+        assertEquals(document.file_name, m.getDocument().file_name);
     }
 
     @Test
     public void testCanForwardMessage() {
         TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
+
         AccountInstance accountInstance = mock(AccountInstance.class);
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
