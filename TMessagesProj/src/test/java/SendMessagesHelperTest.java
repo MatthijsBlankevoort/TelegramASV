@@ -37,7 +37,6 @@ public class SendMessagesHelperTest {
         TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
         doCallRealMethod().when(m).getDialogId();
-        mock(TLRPC.User.class);
         AccountInstance accountInstance = mock(AccountInstance.class);
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
@@ -57,7 +56,7 @@ public class SendMessagesHelperTest {
         TLRPC.TL_document document = mock(TLRPC.TL_document.class);
         MessageObject m = mock(MessageObject.class);
         doCallRealMethod().when(m).getDialogId();
-        mock(TLRPC.User.class);
+
         AccountInstance accountInstance = mock(AccountInstance.class);
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
@@ -76,9 +75,7 @@ public class SendMessagesHelperTest {
     @Test
     public void testCanForwardMessage() {
         TLRPC.Message message = mock(TLRPC.Message.class);
-        TLRPC.TL_document document = mock(TLRPC.TL_document.class);
         MessageObject m = mock(MessageObject.class);
-        mock(TLRPC.User.class);
         AccountInstance accountInstance = mock(AccountInstance.class);
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
@@ -86,7 +83,7 @@ public class SendMessagesHelperTest {
         doCallRealMethod().when(m).canForwardMessage();
 
         m.messageOwner = message;
-        
+
         sendMessagesHelper.sendMessage(m);
 
         assertTrue(m.canForwardMessage());
@@ -94,26 +91,18 @@ public class SendMessagesHelperTest {
 
     @Test
     public void testSendAudioFiles() {
-        TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
+        TLRPC.Message message = mock(TLRPC.Message.class);
+        TLRPC.MessageMedia media = mock(TLRPC.MessageMedia.class);
         TLRPC.TL_document document = mock(TLRPC.TL_document.class);
         TLRPC.TL_documentAttributeAudio audio = mock(TLRPC.TL_documentAttributeAudio.class);
+        AccountInstance accountInstance = mock(AccountInstance.class);
+
         document.attributes = new ArrayList<>();
         document.attributes.add(audio);
 
-        when(m.isVoice()).thenReturn(true);
-        assertEquals(m.isVoice(), true);
-
-    }
-
-    @Test
-    public void testChatIsEncrypted() {
-        TLRPC.Message message = mock(TLRPC.Message.class);
-        TLRPC.EncryptedChat encryptedChat = mock(TLRPC.EncryptedChat.class);
-        MessageObject m = mock(MessageObject.class);
-        doCallRealMethod().when(m).getDialogId();
-        mock(TLRPC.User.class);
-        AccountInstance accountInstance = mock(AccountInstance.class);
+        message.media = media;
+        message.media.document = document;
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
         SendMessagesHelper sendMessagesHelper = accountInstance.getSendMessagesHelper();
@@ -121,10 +110,9 @@ public class SendMessagesHelperTest {
 
         m.messageOwner = message;
 
-
-
         sendMessagesHelper.sendMessage(m);
 
-        assertTrue(m.isSent());
+        when(m.isVoice()).thenReturn(true);
+        assertTrue(m.isVoice());
     }
 }

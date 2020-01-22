@@ -17,7 +17,7 @@ public class MessageObjectTest {
         TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
         doCallRealMethod().when(m).getDialogId();
-        mock(TLRPC.User.class);
+
         AccountInstance accountInstance = mock(AccountInstance.class);
 
         doCallRealMethod().when(accountInstance).getSendMessagesHelper();
