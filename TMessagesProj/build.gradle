@@ -64,6 +64,7 @@ android {
         disable 'MissingTranslation'
         disable 'ExtraTranslation'
         disable 'BlockedPrivateApi'
+        abortOnError false
     }
 
     dexOptions {
