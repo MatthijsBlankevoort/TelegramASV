@@ -1,10 +1,9 @@
 apply plugin: 'com.android.application'
 
 repositories {
+    google()
     mavenCentral()
-    google()
     jcenter()
-    google()
 }
 
 configurations {
