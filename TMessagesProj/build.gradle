@@ -60,12 +60,12 @@ android {
         unitTests.returnDefaultValues = true
     }
 
-    lintOptions {
-        disable 'MissingTranslation'
-        disable 'ExtraTranslation'
-        disable 'BlockedPrivateApi'
-        abortOnError false
-    }
+//    lintOptions {
+//        disable 'MissingTranslation'
+//        disable 'ExtraTranslation'
+//        disable 'BlockedPrivateApi'
+//        abortOnError false
+//    }
 
     dexOptions {
         jumboMode = true
