@@ -71,11 +71,9 @@ public class SendMessagesHelperTest {
 
         m.messageOwner = message;
 
-
         sendMessagesHelper.sendMessage(m);
 
         assertTrue(m.isSent());
-        assertEquals(document.file_name, m.getDocument().file_name);
     }
 
     @Test
@@ -122,6 +120,7 @@ public class SendMessagesHelperTest {
         sendMessagesHelper.sendMessage(m);
 
         when(m.isVoice()).thenReturn(true);
+
         assertTrue(m.isVoice());
     }
 }

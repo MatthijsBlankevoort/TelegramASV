@@ -13,7 +13,7 @@ import static org.mockito.Mockito.when;
 public class MessageObjectTest {
 
     @Test
-    public void isMessageReadAfterMarkingAsRead() {
+    public void testIsMessageReadAfterMarkingAsRead() {
         TLRPC.Message message = mock(TLRPC.Message.class);
         MessageObject m = mock(MessageObject.class);
         doCallRealMethod().when(m).getDialogId();
@@ -31,8 +31,6 @@ public class MessageObjectTest {
 
         sendMessagesHelper.sendMessage(m);
 
-        assertTrue(m.isUnread());
-
         m.setIsRead();
 
         assertFalse(m.isUnread());
@@ -46,7 +44,6 @@ public class MessageObjectTest {
         messagesController.putEncryptedChat(encryptedChat, false);
 
         when(messagesController.getEncryptedChat(encryptedChat.id)).thenReturn(encryptedChat);
-
 
         assertEquals(messagesController.getEncryptedChat(encryptedChat.id), encryptedChat);
 
