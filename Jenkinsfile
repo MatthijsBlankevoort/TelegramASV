@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'gradle:5.4.1' } }
+    agent { docker { image 'gradle:latest' } }
     stages {
         stage('build') {
             steps {
