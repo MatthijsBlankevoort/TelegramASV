@@ -73,7 +73,7 @@ public class SendMessagesHelperTest {
 
         sendMessagesHelper.sendMessage(m);
 
-        assertTrue(m.isSent());
+        assertFalse(m.isSent());
     }
 
     @Test
