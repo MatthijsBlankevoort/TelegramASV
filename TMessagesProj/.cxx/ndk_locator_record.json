@@ -1,5 +1,5 @@
 {
-  "ndkFolder": "/Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle",
+  "ndkFolder": "/Users/farah/Library/Android/sdk/ndk-bundle",
   "messages": [
     {
       "level": "INFO",
@@ -7,7 +7,7 @@
     },
     {
       "level": "INFO",
-      "message": "ndk.dir in local.properties is /Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle"
+      "message": "ndk.dir in local.properties is not set"
     },
     {
       "level": "INFO",
@@ -15,19 +15,15 @@
     },
     {
       "level": "INFO",
-      "message": "sdkFolder is /Users/matthijsblankevoort/Library/Android/sdk"
+      "message": "sdkFolder is /Users/farah/Library/Android/sdk"
     },
     {
       "level": "INFO",
-      "message": "Considering /Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle by ndk.dir"
+      "message": "Considering /Users/farah/Library/Android/sdk/ndk-bundle in SDK ndk-bundle folder"
     },
     {
       "level": "INFO",
-      "message": "Considering /Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle in SDK ndk-bundle folder"
-    },
-    {
-      "level": "INFO",
-      "message": "Found requested ndk.dir (/Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle) which has version 20.1.5948944"
+      "message": "No user requested version, choosing /Users/farah/Library/Android/sdk/ndk-bundle which is version 19.2.5345600"
     }
   ]
 }
