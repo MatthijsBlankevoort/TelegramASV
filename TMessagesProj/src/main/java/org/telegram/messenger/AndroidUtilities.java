@@ -414,7 +414,7 @@ public class AndroidUtilities {
             String newPath;
             try {
                 newPath = Utilities.readlink(pathString);
-            } catch (Throwable e) {
+            } catch (Exception e) {
                 return true;
             }
             if (newPath == null || newPath.equals(pathString)) {
