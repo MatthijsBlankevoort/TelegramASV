@@ -1,14 +1,14 @@
-Executable : /Users/matthijsblankevoort/Library/Android/sdk/ndk-bundle/ndk-build
+Executable : /Users/farah/Library/Android/sdk/ndk-bundle/ndk-build
 arguments : 
 NDK_PROJECT_PATH=null
-APP_BUILD_SCRIPT=/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/jni/Android.mk
-NDK_APPLICATION_MK=/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/jni/Application.mk
+APP_BUILD_SCRIPT=/Users/farah/code/TelegramASV/TMessagesProj/jni/Android.mk
+NDK_APPLICATION_MK=/Users/farah/code/TelegramASV/TMessagesProj/jni/Application.mk
 APP_ABI=x86
 NDK_ALL_ABIS=x86
 NDK_DEBUG=0
 APP_PLATFORM=android-16
-NDK_OUT=/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj
-NDK_LIBS_OUT=/Users/matthijsblankevoort/Documents/school/ASV/projects/Telegram/TMessagesProj/build/intermediates/ndkBuild/afatRelease/lib
+NDK_OUT=/Users/farah/code/TelegramASV/TMessagesProj/build/intermediates/ndkBuild/afatRelease/obj
+NDK_LIBS_OUT=/Users/farah/code/TelegramASV/TMessagesProj/build/intermediates/ndkBuild/afatRelease/lib
 NDK_APPLICATION_MK:=jni/Application.mk
 APP_PLATFORM:=android-16
 -j8
