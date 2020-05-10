@@ -109,7 +109,7 @@ public class SQLitePreparedStatement {
                 hashMap.remove(this);
             }*/
             isFinalized = true;
-            finalize(sqliteStatementHandle);
+            finalise(sqliteStatementHandle);
         } catch (SQLiteException e) {
             if (BuildVars.LOGS_ENABLED) {
                 FileLog.e(e.getMessage(), e);
@@ -153,6 +153,6 @@ public class SQLitePreparedStatement {
     native void bindNull(long statementHandle, int index) throws SQLiteException;
     native void reset(long statementHandle) throws SQLiteException;
     native long prepare(long sqliteHandle, String sql) throws SQLiteException;
-    native void finalize(long statementHandle) throws SQLiteException;
+    native void finalise(long statementHandle) throws SQLiteException;
     native int step(long statementHandle) throws SQLiteException;
 }

@@ -135,7 +135,7 @@ public final class SonicAudioProcessor implements AudioProcessor {
    * @see #configure(int, int, int)
    */
   public void setOutputSampleRateHz(int sampleRateHz) {
-    pendingOutputSampleRateHz = sampleRateHz;
+    outputSampleRateHz = sampleRateHz;
   }
 
   /**

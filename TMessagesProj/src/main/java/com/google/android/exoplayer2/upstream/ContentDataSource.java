@@ -165,7 +165,7 @@ public final class ContentDataSource extends BaseDataSource {
           assetFileDescriptor.close();
         }
       } catch (IOException e) {
-        throw new ContentDataSourceException(e);
+        System.err.println(e.getMessage());
       } finally {
         assetFileDescriptor = null;
         if (opened) {

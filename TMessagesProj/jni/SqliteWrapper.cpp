@@ -55,7 +55,7 @@ void Java_org_telegram_SQLite_SQLitePreparedStatement_reset(JNIEnv *env, jobject
     }
 }
 
-void Java_org_telegram_SQLite_SQLitePreparedStatement_finalize(JNIEnv *env, jobject object, jlong statementHandle) {
+void Java_org_telegram_SQLite_SQLitePreparedStatement_finalise(JNIEnv *env, jobject object, jlong statementHandle) {
     sqlite3_finalize((sqlite3_stmt *) (intptr_t) statementHandle);
 }
 

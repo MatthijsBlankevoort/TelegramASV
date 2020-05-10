@@ -850,7 +850,7 @@ public class ActionBar extends FrameLayout {
     }
 
     public void setTitleActionRunnable(Runnable action) {
-        lastRunnable = titleActionRunnable = action;
+        titleActionRunnable = action;
     }
 
     public void setTitleOverlayText(String title, int titleId, Runnable action) {

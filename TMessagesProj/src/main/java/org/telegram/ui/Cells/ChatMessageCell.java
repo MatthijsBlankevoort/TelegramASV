@@ -7453,7 +7453,7 @@ public class ChatMessageCell extends BaseCell implements SeekBar.SeekBarDelegate
     }
 
     public int getCaptionHeight() {
-        return addedCaptionHeight;
+        return captionHeight;
     }
 
     public ImageReceiver getAvatarImage() {
