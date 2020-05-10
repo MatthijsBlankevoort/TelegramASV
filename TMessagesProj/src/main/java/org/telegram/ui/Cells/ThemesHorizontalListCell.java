@@ -430,7 +430,7 @@ public class ThemesHorizontalListCell extends RecyclerListView implements Notifi
 
         @Keep
         public float getAccentState() {
-            return accentColor;
+            return accentState;
         }
 
         @Keep

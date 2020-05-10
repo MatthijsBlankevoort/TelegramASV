@@ -196,7 +196,7 @@ public class MediaActionDrawable extends Drawable {
     }
 
     public int getCurrentIcon() {
-        return nextIcon;
+        return currentIcon;
     }
 
     public int getPreviousIcon() {

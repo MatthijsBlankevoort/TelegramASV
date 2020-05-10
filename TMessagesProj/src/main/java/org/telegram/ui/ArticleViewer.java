@@ -7337,6 +7337,9 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                 for (int a = start; a < end; a++) {
                     sum += array[a];
                 }
+                if (sum == 0){
+                    return 0;
+                }
                 return maxSizeWidth / sum;
             }
 

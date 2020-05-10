@@ -346,7 +346,7 @@ public class CameraView extends FrameLayout implements TextureView.SurfaceTextur
     }
 
     public Matrix getMatrix() {
-        return txform;
+        return matrix;
     }
 
     @Override

@@ -330,7 +330,7 @@ public final class CacheDataSource implements DataSource {
 
   @Override
   public @Nullable Uri getUri() {
-    return actualUri;
+    return uri;
   }
 
   @Override

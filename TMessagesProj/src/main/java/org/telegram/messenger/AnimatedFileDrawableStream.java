@@ -91,7 +91,7 @@ public class AnimatedFileDrawableStream implements FileLoadOperationStream {
     }
 
     public Object getParentObject() {
-        return document;
+        return parentObject;
     }
 
     public boolean isPreview() {
