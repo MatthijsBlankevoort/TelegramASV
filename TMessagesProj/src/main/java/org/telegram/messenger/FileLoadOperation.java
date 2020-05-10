@@ -337,7 +337,7 @@ public class FileLoadOperation {
     }
 
     public int getDatacenterId() {
-        return initialDatacenterId;
+        return datacenterId;
     }
 
     public void setForceRequest(boolean forceRequest) {
