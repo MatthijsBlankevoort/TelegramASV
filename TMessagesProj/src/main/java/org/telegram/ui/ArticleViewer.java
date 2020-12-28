@@ -447,13 +447,12 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                         break;
                     }
                 }
-            } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                if (startMoving) {
+            } else if (event.getAction() == MotionEvent.ACTION_MOVE && startMoving) {
                     if (Math.abs(startX - x) >= AndroidUtilities.getPixelsInCM(0.5f, true)) {
                         moving = true;
                         startMoving = false;
                     }
-                } else if (moving) {
+            } else if (event.getAction() == MotionEvent.ACTION_MOVE && moving) {
                     for (int a = 0; a < fontSizeCount; a++) {
                         int cx = sideSide + (lineSize + gapSize * 2 + circleSize) * a + circleSize / 2;
                         int diff = lineSize / 2 + circleSize / 2 + gapSize;
@@ -466,9 +465,8 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                             break;
                         }
                     }
-                }
-            } else if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL) {
-                if (!moving) {
+
+            } else if (event.getAction() == MotionEvent.ACTION_UP || event.getAction() == MotionEvent.ACTION_CANCEL && !moving) {
                     for (int a = 0; a < 5; a++) {
                         int cx = sideSide + (lineSize + gapSize * 2 + circleSize) * a + circleSize / 2;
                         if (x > cx - AndroidUtilities.dp(15) && x < cx + AndroidUtilities.dp(15)) {
@@ -480,10 +478,9 @@ public class ArticleViewer implements NotificationCenter.NotificationCenterDeleg
                             break;
                         }
                     }
-                } else {
-                    if (selectedFontSize != startMovingQuality) {
-                        updatePaintSize();
-                    }
+            } else {
+                if (selectedFontSize != startMovingQuality) {
+                    updatePaintSize();
                 }
                 startMoving = false;
                 moving = false;

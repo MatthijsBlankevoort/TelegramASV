@@ -230,7 +230,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
       while (!processedFlag.get() && !released) {
         try {
           wait();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
           wasInterrupted = true;
         }
       }
@@ -250,7 +250,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
     while (!released) {
       try {
         wait();
-      } catch (InterruptedException e) {
+      } catch (Exception e) {
         wasInterrupted = true;
       }
     }
