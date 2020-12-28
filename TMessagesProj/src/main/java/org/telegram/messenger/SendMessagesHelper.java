@@ -1757,15 +1757,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                         inputMedia = uploadedDocument;
                         performMediaUpload = true;
                     } else {
-                        TLRPC.TL_inputMediaDocument media = new TLRPC.TL_inputMediaDocument();
-                        media.id = new TLRPC.TL_inputDocument();
-                        media.id.id = document.id;
-                        media.id.access_hash = document.access_hash;
-                        media.id.file_reference = document.file_reference;
-                        if (media.id.file_reference == null) {
-                            media.id.file_reference = new byte[0];
-                        }
-                        inputMedia = media;
+                        inputMedia = checkDocumentHash(document);
                     }
 
                     delayedMessage = new DelayedMessage(peer);
@@ -2261,6 +2253,18 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
     public void sendMessage(MessageObject retryMessageObject) {
 
         sendMessage(null, null, null, null, null, null, null, null, null, retryMessageObject.getDialogId(), retryMessageObject.messageOwner.attachPath, null, null, true, retryMessageObject, null, retryMessageObject.messageOwner.reply_markup, retryMessageObject.messageOwner.params, !retryMessageObject.messageOwner.silent, retryMessageObject.scheduled ? retryMessageObject.messageOwner.date : 0, 0, null);
+    }
+
+    public TLRPC.TL_inputMediaDocument checkDocumentHash(TLRPC.Document document) {
+        TLRPC.TL_inputMediaDocument media = new TLRPC.TL_inputMediaDocument();
+        media.id = new TLRPC.TL_inputDocument();
+        media.id.id = document.id;
+        media.id.access_hash = document.access_hash;
+        media.id.file_reference = document.file_reference;
+        if (media.id.file_reference == null) {
+            media.id.file_reference = new byte[0];
+        }
+        return media;
     }
 
     public void sendMessage(TLRPC.User user, long peer, MessageObject reply_to_msg, TLRPC.ReplyMarkup replyMarkup, HashMap<String, String> params, boolean notify, int scheduleDate) {
@@ -2895,15 +2899,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                             inputMedia = uploadedDocument;
                             performMediaUpload = true;
                         } else {
-                            TLRPC.TL_inputMediaDocument media = new TLRPC.TL_inputMediaDocument();
-                            media.id = new TLRPC.TL_inputDocument();
-                            media.id.id = document.id;
-                            media.id.access_hash = document.access_hash;
-                            media.id.file_reference = document.file_reference;
-                            if (media.id.file_reference == null) {
-                                media.id.file_reference = new byte[0];
-                            }
-                            inputMedia = media;
+                            inputMedia = checkDocumentHash(document);
                         }
                         if (delayedMessage == null) {
                             delayedMessage = new DelayedMessage(peer);
@@ -2952,15 +2948,7 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                             inputMedia = uploadedMedia;
                             performMediaUpload = uploadedMedia instanceof TLRPC.TL_inputMediaUploadedDocument;
                         } else {
-                            TLRPC.TL_inputMediaDocument media = new TLRPC.TL_inputMediaDocument();
-                            media.id = new TLRPC.TL_inputDocument();
-                            media.id.id = document.id;
-                            media.id.access_hash = document.access_hash;
-                            media.id.file_reference = document.file_reference;
-                            if (media.id.file_reference == null) {
-                                media.id.file_reference = new byte[0];
-                            }
-                            inputMedia = media;
+                            inputMedia = checkDocumentHash(document);
                         }
                         if (!http && uploadedMedia != null) {
                             delayedMessage = new DelayedMessage(peer);
@@ -2984,20 +2972,11 @@ public class SendMessagesHelper extends BaseController implements NotificationCe
                             newMsg.ttl = uploadedDocument.ttl_seconds = ttl;
                             uploadedDocument.flags |= 2;
                         }
-
                         if (document.access_hash == 0) {
                             inputMedia = uploadedDocument;
                             performMediaUpload = true;
                         } else {
-                            TLRPC.TL_inputMediaDocument media = new TLRPC.TL_inputMediaDocument();
-                            media.id = new TLRPC.TL_inputDocument();
-                            media.id.id = document.id;
-                            media.id.access_hash = document.access_hash;
-                            media.id.file_reference = document.file_reference;
-                            if (media.id.file_reference == null) {
-                                media.id.file_reference = new byte[0];
-                            }
-                            inputMedia = media;
+                            inputMedia = checkDocumentHash(document);
                         }
                         delayedMessage = new DelayedMessage(peer);
                         delayedMessage.type = 3;
