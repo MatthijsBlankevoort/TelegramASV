@@ -542,7 +542,9 @@ public class ThemeDescription {
                     try {
                         Field field = cachedFields.get(key);
                         if (field == null) {
-                            field = listClasses[b].getDeclaredField(listClassesFieldName[b]);
+                            if(listClasses != null){
+                                field = listClasses[b].getDeclaredField(listClassesFieldName[b]);
+                            }
                             if (field != null) {
                                 field.setAccessible(true);
                                 cachedFields.put(key, field);

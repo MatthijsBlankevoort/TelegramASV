@@ -2376,8 +2376,10 @@ public class PassportActivity extends BaseFragment implements NotificationCenter
                 RSAPublicKey pubKey = (RSAPublicKey) kf.generatePublic(keySpecX509);
 
                 Cipher c = Cipher.getInstance("RSA/NONE/OAEPWithSHA1AndMGF1Padding", "BC");
-                c.init(Cipher.ENCRYPT_MODE, pubKey);
-                req.credentials.secret = c.doFinal(encryptionResult.decrypyedFileSecret);
+                if( c.instanceof("OAEPWithSHA1AndMGF1Padding")){
+                    c.init(Cipher.ENCRYPT_MODE, pubKey);
+                    req.credentials.secret = c.doFinal(encryptionResult.decrypyedFileSecret);
+                }
             } catch (Exception e) {
                 FileLog.e(e);
             }

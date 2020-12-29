@@ -1,0 +1,119 @@
+Environment variables:
+  - HOME=/Users/farah
+  - JAVA_ARCH=x86_64
+  - JAVA_MAIN_CLASS_67016=org.sonarsource.scanner.cli.Main
+  - LANG=nl_NL.UTF-8
+  - LC_CTYPE=nl_NL.UTF-8
+  - LESS=-R
+  - LOGNAME=farah
+  - LSCOLORS=Gxfxcxdxbxegedabagacad
+  - NVM_BIN=/Users/farah/.nvm/versions/node/v10.16.0/bin
+  - NVM_CD_FLAGS=-q
+  - NVM_DIR=/Users/farah/.nvm
+  - PAGER=less
+  - PATH=/usr/local/opt/php@7.2/sbin:/usr/local/opt/php@7.2/bin:/Users/farah/.cargo/bin:/Users/farah/.composer/vendor/bin:/usr/local/bin:/Users/farah/.nvm/versions/node/v10.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+  - PWD=/Users/farah/code/TelegramASV
+  - SERVER_ENV=royale.with.cheese
+  - SHELL=/bin/zsh
+  - SHLVL=1
+  - SONAR_SCANNER_HOME=/usr/local/Cellar/sonar-scanner/4.3.0.2102/libexec
+  - SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.vFQl9lLdhH/Listeners
+  - TERM=xterm-256color
+  - TERM_PROGRAM=Apple_Terminal
+  - TERM_PROGRAM_VERSION=433
+  - TERM_SESSION_ID=D5AC2C3E-4B37-44C1-AD6C-ED52E4D69AC6
+  - TMPDIR=/var/folders/w2/w9x28zys501dtdg3grylrlw00000gn/T/
+  - USER=farah
+  - XPC_FLAGS=0x0
+  - XPC_SERVICE_NAME=0
+  - ZSH=/Users/farah/.oh-my-zsh
+  - __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x5
+  - com.apple.java.jvmTask=CommandLine
+System properties:
+  - awt.toolkit=sun.lwawt.macosx.LWCToolkit
+  - file.encoding=UTF-8
+  - file.separator=/
+  - ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+  - http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+  - java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+  - java.awt.headless=true
+  - java.class.path=/usr/local/Cellar/sonar-scanner/4.3.0.2102/libexec/lib/sonar-scanner-cli-4.3.0.2102.jar
+  - java.class.version=56.0
+  - java.home=/Library/Java/JavaVirtualMachines/openjdk-12.jdk/Contents/Home
+  - java.io.tmpdir=/var/folders/w2/w9x28zys501dtdg3grylrlw00000gn/T/
+  - java.library.path=/Users/farah/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+  - java.runtime.name=OpenJDK Runtime Environment
+  - java.runtime.version=12+33
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=12
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=https://java.oracle.com/
+  - java.vendor.url.bug=https://bugreport.java.com/bugreport/
+  - java.version=12
+  - java.version.date=2019-03-19
+  - java.vm.compressedOopsMode=Zero based
+  - java.vm.info=mixed mode, sharing
+  - java.vm.name=OpenJDK 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=12
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=12+33
+  - jdk.debug=release
+  - line.separator=
+
+  - os.arch=x86_64
+  - os.name=Mac OS X
+  - os.version=10.15.2
+  - path.separator=:
+  - project.home=/Users/farah/code/TelegramASV
+  - scanner.home=/usr/local/Cellar/sonar-scanner/4.3.0.2102/libexec
+  - socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+  - sun.arch.data.model=64
+  - sun.boot.library.path=/Library/Java/JavaVirtualMachines/openjdk-12.jdk/Contents/Home/lib
+  - sun.cpu.endian=little
+  - sun.io.unicode.encoding=UnicodeBig
+  - sun.java.command=org.sonarsource.scanner.cli.Main -Dsonar.projectKey=telegram -X
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=UTF-8
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - user.country=NL
+  - user.dir=/Users/farah/code/TelegramASV
+  - user.home=/Users/farah
+  - user.language=nl
+  - user.name=farah
+  - user.timezone=Europe/Amsterdam
+SonarQube plugins:
+  - SonarPython 1.13.0.2922 (python)
+  - SonarCSS 1.0.3.724 (cssfamily)
+  - JaCoCo 1.0.1.143 (jacoco)
+  - SonarGo 1.1.0.1612 (go)
+  - SonarKotlin 1.5.0.315 (kotlin)
+  - Svn 1.9.0.1295 (scmsvn)
+  - SonarJS 5.1.1.7506 (javascript)
+  - SonarRuby 1.5.0.315 (ruby)
+  - SonarScala 1.5.0.315 (sonarscala)
+  - SonarC# 7.11.0.8083 (csharp)
+  - SonarJava 5.11.0.17289 (java)
+  - LDAP 2.2.0.608 (ldap)
+  - SonarHTML 3.1.0.1615 (web)
+  - Git 1.8.0.1574 (scmgit)
+  - SonarFlex 2.4.0.1222 (flex)
+  - SonarXML 2.0.1.2020 (xml)
+  - SonarPHP 3.0.0.4537 (php)
+  - SonarTS 1.9.0.3766 (typescript)
+  - SonarVB 7.11.0.8083 (vbnet)
+Global server settings:
+  - sonar.core.id=BF41A1F2-AXE7UIOoI8qkX2mTcSDY
+  - sonar.core.startTime=2020-06-15T20:43:12+0200
+Project server settings:
+Project scanner properties:
+  - sonar.host.url=http://localhost:9000
+  - sonar.projectBaseDir=/Users/farah/code/TelegramASV
+  - sonar.projectKey=telegram
+  - sonar.scanner.app=ScannerCli
+  - sonar.scanner.appVersion=4.3.0.2102
+  - sonar.sourceEncoding=UTF-8
+  - sonar.verbose=true
+  - sonar.working.directory=/Users/farah/code/TelegramASV/.scannerwork
