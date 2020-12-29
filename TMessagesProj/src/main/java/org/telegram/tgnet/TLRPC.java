@@ -5458,7 +5458,7 @@ public class TLRPC {
 	public static class TL_messageMediaInvoice extends MessageMedia {
 		public static int constructor = 0x84551347;
 
-		public WebDocument photo;
+		public WebDocument document_photo;
 
 		public void readParams(AbstractSerializedData stream, boolean exception) {
 			flags = stream.readInt32(exception);
@@ -5485,7 +5485,7 @@ public class TLRPC {
 			stream.writeString(title);
 			stream.writeString(description);
 			if ((flags & 1) != 0) {
-				photo.serializeToStream(stream);
+				document_photo.serializeToStream(stream);
 			}
 			if ((flags & 4) != 0) {
 				stream.writeInt32(receipt_msg_id);

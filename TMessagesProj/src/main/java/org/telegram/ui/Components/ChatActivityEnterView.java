@@ -503,7 +503,7 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
 
     private class RecordDot extends View {
 
-        private float alpha;
+        private float recordDotAlpha;
         private long lastUpdateTime;
         private boolean isIncr;
 
@@ -513,7 +513,7 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
         }
 
         public void resetAlpha() {
-            alpha = 1.0f;
+            recordDotAlpha = 1.0f;
             lastUpdateTime = System.currentTimeMillis();
             isIncr = false;
             invalidate();
@@ -521,18 +521,18 @@ public class ChatActivityEnterView extends FrameLayout implements NotificationCe
 
         @Override
         protected void onDraw(Canvas canvas) {
-            redDotPaint.setAlpha((int) (255 * alpha));
+            redDotPaint.setAlpha((int) (255 * recordDotAlpha));
             long dt = (System.currentTimeMillis() - lastUpdateTime);
             if (!isIncr) {
-                alpha -= dt / 400.0f;
-                if (alpha <= 0) {
-                    alpha = 0;
+                recordDotAlpha -= dt / 400.0f;
+                if (recordDotAlpha <= 0) {
+                    recordDotAlpha = 0;
                     isIncr = true;
                 }
             } else {
-                alpha += dt / 400.0f;
-                if (alpha >= 1) {
-                    alpha = 1;
+                recordDotAlpha += dt / 400.0f;
+                if (recordDotAlpha >= 1) {
+                    recordDotAlpha = 1;
                     isIncr = false;
                 }
             }

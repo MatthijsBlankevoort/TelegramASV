@@ -11172,10 +11172,14 @@ public class ChatActivity extends BaseFragment implements NotificationCenter.Not
         if (PhotoViewer.hasInstance() && PhotoViewer.getInstance().isVisible()) {
             if (PhotoViewer.getInstance().getSelectiongLength() == 0 || menu.findItem(android.R.id.copy) == null) {
                 return true;
+            } else {
+                return false;
             }
         } else {
             if (chatActivityEnterView.getSelectionLength() == 0 || menu.findItem(android.R.id.copy) == null) {
                 return true;
+            } else {
+                return false;
             }
         }
         if (Build.VERSION.SDK_INT >= 23) {
